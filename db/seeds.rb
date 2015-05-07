@@ -12,5 +12,5 @@ chile = Bank.create(name: 'Banco de Chile')
   santander.bank_subsidiaries.create(address: bs)
 end
 ['Av. Presidente Riesco 5711 L/1,LAS CONDES', 'Av. Nueva Los Leones 017,PROVIDENCIA'].each do |bs|
-  chile.bank_subsidiaries.create(name: bs)
+  chile.bank_subsidiaries.create(address: bs)
 end
