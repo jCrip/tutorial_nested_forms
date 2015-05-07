@@ -15,6 +15,18 @@
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>
+
+  <h2>Sucursales</h2>
+
+  <%= f.fields_for :bank_subsidiaries do | subsidiary | %>
+    <div class="bank_subsidiaries_fields">
+      <div class="fields">
+        <%= subsidiary.label :address, "Direccion" %><br>
+        <%= subsidiary.text_field :address %>
+      </div>
+    </div>
+  <% end %>
+
   <div class="actions">
     <%= f.submit %>
   </div>
