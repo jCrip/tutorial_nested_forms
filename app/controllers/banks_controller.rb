@@ -69,6 +69,6 @@ class BanksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def bank_params
-      params.require(:bank).permit(:name)
+      params.require(:bank).permit(:name, bank_subsidiaries_attributes: [:id, :address])
     end
 end
