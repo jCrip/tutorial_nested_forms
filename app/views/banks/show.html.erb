@@ -2,8 +2,20 @@
 
 <p>
   <strong>Name:</strong>
-  <%= @bank.name %>
+  <%= @bank %>
 </p>
+
+<h2>Sucursales</h2>
+
+<% if @bank.bank_subsidiaries.any? %>
+	<ul>
+		<% @bank.bank_subsidiaries.each do |subsidiary| %>
+		<li><%= link_to subsidiary, subsidiary %></li>
+		<% end %>
+	</ul>
+<% else %>
+	<p>no hay sucursales</p>
+<% end %>
 
 <%= link_to 'Edit', edit_bank_path(@bank) %> |
 <%= link_to 'Back', banks_path %>
