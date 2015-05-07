@@ -15,6 +15,7 @@ class BanksController < ApplicationController
   # GET /banks/new
   def new
     @bank = Bank.new
+    @bank.bank_subsidiaries.build
   end
 
   # GET /banks/1/edit
@@ -70,6 +71,6 @@ class BanksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def bank_params
-      params.require(:bank).permit(:name, bank_subsidiaries_attributes: [:id, :address])
+      params.require(:bank).permit(:name, bank_subsidiaries_attributes: [:id, :address, :_destroy])
     end
 end
