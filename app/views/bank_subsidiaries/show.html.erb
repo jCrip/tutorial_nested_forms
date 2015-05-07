@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @bank_subsidiary.address %>
+</p>
+
+<p>
+  <strong>Bank:</strong>
+  <%= @bank_subsidiary.bank %>
+</p>
+
+<%= link_to 'Edit', edit_bank_subsidiary_path(@bank_subsidiary) %> |
+<%= link_to 'Back', bank_subsidiaries_path %>
