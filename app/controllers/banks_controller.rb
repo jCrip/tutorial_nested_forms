@@ -19,6 +19,7 @@ class BanksController < ApplicationController
 
   # GET /banks/1/edit
   def edit
+    @bank.bank_subsidiaries.build
   end
 
   # POST /banks
